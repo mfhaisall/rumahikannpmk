@@ -28,108 +28,40 @@
 
     <!-- Content -->
     <div class="content">
-      <h1>Best Seller</h1>
+      <h1>Ikan Konsumsi</h1>
       <div class="card-container">
+        {% for ikan in data_ikan %}
+        {% if ikan.type == "konsumsi" %}
         <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Mujair">
-          <h3>Ikan Mujair</h3>
-          <p>Harga: Rp20.000/kg</p>
+          <img src="{{ikan.gambar}}" alt="Ikan Mujair">
+          <h3>{{ikan.nama}}</h3>
+          <p>Harga: Rp.{{item.harga}}/kg</p>
           <button>Beli Sekarang</button>
         </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+
+      <h1>Ikan Hias</h1>
+      <div class="card-container">
+        {% for ikan in data_ikan %}
+        {% if ikan.type == "hias" %}
         <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Gurame">
-          <h3>Ikan Gurame</h3>
-          <p>Harga: Rp50.000/kg</p>
+          <img src="{{ikan.gambar}}" alt="Ikan Mujair">
+          <h3>{{ikan.nama}}</h3>
+          <p>Harga: Rp.{{item.harga}}/kg</p>
           <button>Beli Sekarang</button>
         </div>
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Lele">
-          <h3>Ikan Lele</h3>
-          <p>Harga: Rp15.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
+        {% endif %}
+        {% endfor %}
       </div>
     </div>
 
     
 
      <!-- Content -->
-    <div class="content">
-      <h1>Ikan Konsumsi</h1>
-      <div class="card-container">
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Mujair">
-          <h3>Ikan Mujair</h3>
-          <p>Harga: Rp20.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Gurame">
-          <h3>Ikan Gurame</h3>
-          <p>Harga: Rp50.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Lele">
-          <h3>Ikan Lele</h3>
-          <p>Harga: Rp15.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-      </div>
-    </div>
-  
- <!-- Content -->
-    <div class="content">
-      <h1>Ikan Hias</h1>
-      <div class="card-container">
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Mujair">
-          <h3>Ikan Mujair</h3>
-          <p>Harga: Rp20.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Gurame">
-          <h3>Ikan Gurame</h3>
-          <p>Harga: Rp50.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Lele">
-          <h3>Ikan Lele</h3>
-          <p>Harga: Rp15.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-      </div>
-    </div>
-
-<!-- Content -->
-    <div class="content">
-      <h1>Perlengkapan Ikan</h1>
-      <div class="card-container">
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Mujair">
-          <h3>Ikan Mujair</h3>
-          <p>Harga: Rp20.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Gurame">
-          <h3>Ikan Gurame</h3>
-          <p>Harga: Rp50.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-        <div class="card">
-          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Lele">
-          <h3>Ikan Lele</h3>
-          <p>Harga: Rp15.000/kg</p>
-          <button>Beli Sekarang</button>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
+    
 {%endblock content%}
 </body>
 </html>
