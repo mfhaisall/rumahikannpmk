@@ -1,0 +1,44 @@
+{% load static %}
+
+{%block style%}
+  <link rel="stylesheet" href="{% static 'css/about.css'%}">
+{%endblock style%}
+
+{%block content%}
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+    <li><a href="/">home</li>
+  <li><a href="/about/">about</li>
+  <li><a href="/product/">product</li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h1>Rumah Ikann</h1>
+      <div class="card-container">
+        <div class="card">
+          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Mujair">
+          <h3>Ikan Mujair</h3>
+          <p>Harga: Rp20.000/kg</p>
+          <button>Beli Sekarang</button>
+        </div>
+        <div class="card">
+          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Gurame">
+          <h3>Ikan Gurame</h3>
+          <p>Harga: Rp50.000/kg</p>
+          <button>Beli Sekarang</button>
+        </div>
+        <div class="card">
+          <img src="{% static 'image/mujair.jpg' %}" alt="Ikan Lele">
+          <h3>Ikan Lele</h3>
+          <p>Harga: Rp15.000/kg</p>
+          <button>Beli Sekarang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock content%}
